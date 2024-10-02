@@ -7,24 +7,26 @@ package TugasPertemuan5;
         public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // Input data mahasiswa
         System.out.print("Masukkan NPM: ");
         String npm = input.nextLine();
+            
         System.out.print("Masukkan Nama Mahasiswa: ");
         String nama = input.nextLine();
+            
         System.out.print("Masukkan Nilai Kehadiran: ");
         double nilaiKehadiran = input.nextDouble();
+            
         System.out.print("Masukkan Nilai Tugas: ");
         double nilaiTugas = input.nextDouble();
+            
         System.out.print("Masukkan Nilai UTS: ");
         double nilaiUTS = input.nextDouble();
+            
         System.out.print("Masukkan Nilai UAS: ");
         double nilaiUAS = input.nextDouble();
 
-        // Hitung nilai akhir
         double nilaiAkhir = (0.10 * nilaiKehadiran) + (0.20 * nilaiTugas) + (0.30 * nilaiUTS) + (0.40 * nilaiUAS);
 
-        // Menentukan grade
         String grade;
         String keterangan;
         if (nilaiAkhir >= 0 && nilaiAkhir <= 45) {
@@ -44,7 +46,6 @@ package TugasPertemuan5;
             keterangan = "ISTIMEWA";
         }
 
-        // Output hasil
         System.out.println("\nOutput:");
         System.out.println("NPM: " + npm);
         System.out.println("Nama Mahasiswa: " + nama);
