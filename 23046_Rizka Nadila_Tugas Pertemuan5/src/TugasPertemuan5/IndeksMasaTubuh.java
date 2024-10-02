@@ -7,16 +7,13 @@ import java.util.Scanner;
     public static void main(String[] args) {
          Scanner input = new Scanner(System.in);
 
-        // Input tinggi dan berat badan
         System.out.print("Masukkan berat badan (kg): ");
         double berat = input.nextDouble();
+        
         System.out.print("Masukkan tinggi badan (m): ");
         double tinggi = input.nextDouble();
-
-        // Hitung IMT
         double imt = berat / (tinggi * tinggi);
 
-        // Menentukan kategori IMT
         String kategori;
         if (imt < 18.5) {
             kategori = "Berat Badan Kurang";
@@ -30,7 +27,6 @@ import java.util.Scanner;
             kategori = "Sangat Gemuk";
         }
 
-        // Output hasil
         System.out.println("Nilai IMT: " + imt);
         System.out.println("Kategori: " + kategori);
     }
